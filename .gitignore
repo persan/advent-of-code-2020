@@ -3,3 +3,12 @@
 
 # Ada Library Information
 *.ali
+b__*
+*.ci
+*.stdout
+*.stderr
+*.bexch
+*.cgpr
+*-loc.xml
+messages.txt
+
