@@ -18,7 +18,12 @@ project Advent_Of_Code is
    package Compiler is
       for Driver ("makefile") use "";
       for Driver ("Project File") use "";
-      for Switches ("ada") use ("-gnatf", "-gnatX", "-fcallgraph-info=su,da", "-gnatwa", "-gnatyaAbBcdfhiklnOprtux");
+      for Switches ("ada") use ("-gnatf");
+      for Switches ("ada") use Compiler'Switches ("ada") & ("-g");
+      for Switches ("ada") use Compiler'Switches ("ada") & ("-gnatX");
+      --  for Switches ("ada") use Switches ("ada") & ("-fcallgraph-info=su,da");
+      for Switches ("ada") use Compiler'Switches ("ada") & ("-gnatwa");
+      for Switches ("ada") use Compiler'Switches ("ada") & ("-gnatyaAbBcdfhiklnOprtux");
    end Compiler;
 
    package Binder is
