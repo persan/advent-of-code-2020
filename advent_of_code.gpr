@@ -4,8 +4,31 @@ project Advent_Of_Code is
 
    for Source_Dirs use (".", "src/**");
    for Object_Dir use ".obj";
-   for Main use ("adventofcode-day_2-main.adb");
    for Main use project'Main & ("adventofcode-day_1-main.adb");
+   for Main use project'Main & ("adventofcode-day_2-main.adb");
+   for Main use project'Main & ("adventofcode-day_3-main.adb");
+   for Main use project'Main & ("adventofcode-day_4-main.adb");
+   for Main use project'Main & ("adventofcode-day_5-main.adb");
+   for Main use project'Main & ("adventofcode-day_6-main.adb");
+   for Main use project'Main & ("adventofcode-day_7-main.adb");
+   for Main use project'Main & ("adventofcode-day_8-main.adb");
+   for Main use project'Main & ("adventofcode-day_9-main.adb");
+   for Main use project'Main & ("adventofcode-day_10-main.adb");
+   for Main use project'Main & ("adventofcode-day_11-main.adb");
+   for Main use project'Main & ("adventofcode-day_12-main.adb");
+   for Main use project'Main & ("adventofcode-day_13-main.adb");
+   for Main use project'Main & ("adventofcode-day_14-main.adb");
+   for Main use project'Main & ("adventofcode-day_15-main.adb");
+   for Main use project'Main & ("adventofcode-day_16-main.adb");
+   for Main use project'Main & ("adventofcode-day_17-main.adb");
+   for Main use project'Main & ("adventofcode-day_18-main.adb");
+   for Main use project'Main & ("adventofcode-day_19-main.adb");
+   for Main use project'Main & ("adventofcode-day_20-main.adb");
+   for Main use project'Main & ("adventofcode-day_21-main.adb");
+   for Main use project'Main & ("adventofcode-day_22-main.adb");
+   for Main use project'Main & ("adventofcode-day_23-main.adb");
+   for Main use project'Main & ("adventofcode-day_24-main.adb");
+   for Main use project'Main & ("adventofcode-day_25-main.adb");
    for Languages use ("Ada", "Makefile", "Project File");
    for Exec_Dir use "bin";
 
