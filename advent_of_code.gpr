@@ -4,7 +4,8 @@ project Advent_Of_Code is
 
    for Source_Dirs use (".", "src/**");
    for Object_Dir use ".obj";
-   for Main use ("adventofcode-day_1-main.adb");
+   for Main use ("adventofcode-day_2-main.adb");
+   for Main use project'Main & ("adventofcode-day_1-main.adb");
    for Languages use ("Ada", "Makefile", "Project File");
    for Exec_Dir use "bin";
 
