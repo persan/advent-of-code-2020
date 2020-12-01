@@ -1,15 +1,16 @@
+--  https://adventofcode.com/2020'
+
 project Advent_Of_Code is
 
    for Source_Dirs use (".", "src/**");
    for Object_Dir use ".obj";
-   for Main use ("main.adb");
+   for Main use ("adventofcode-day_1-main.adb");
    for Languages use ("Ada", "Makefile", "Project File");
+   for Exec_Dir use "bin";
 
    package Make is
       for Makefile use "Makefile";
    end Make;
-
-   for Exec_Dir use "bin";
 
    package Builder is
       for Switches ("ada") use ("-j0", "-k");
@@ -17,7 +18,7 @@ project Advent_Of_Code is
 
    package Compiler is
       for Driver ("makefile") use "";
-      for Driver ("Project File") use "";
+      for Driver ("project file") use "";
       for Switches ("ada") use ("-gnatf");
       for Switches ("ada") use Compiler'Switches ("ada") & ("-g");
       for Switches ("ada") use Compiler'Switches ("ada") & ("-gnatX");
