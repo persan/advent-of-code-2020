@@ -1,3 +1,3 @@
-package body adventofcode is
+package body Adventofcode is
 
-end adventofcode;
+end Adventofcode;

@@ -1,4 +1,4 @@
-package adventofcode is
+package Adventofcode is
    pragma Elaborate_Body;
 
-end adventofcode;
+end Adventofcode;
