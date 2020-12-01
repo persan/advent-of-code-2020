@@ -21,9 +21,8 @@ begin
 
    Assert (514579 = Eval ((1721, 979, 366, 299, 675, 1456), 2020), "Invalid");
    Assert (731731 = Eval (Read ("src/day-1/input"), 2020), "invalid");
-
-   Put_Line (Eval3 ((1721, 979, 366, 299, 675, 1456), 2020)'Img);
-   Put_Line (Eval3 (Read ("src/day-1/input"), 2020)'Img);
    Assert (241861950 = Eval3 ((1721, 979, 366, 299, 675, 1456), 2020), "Invalid");
+
+   Put_Line (Eval3 (Read ("src/day-1/input"), 2020)'Img);
 
 end Adventofcode.Day_1.Main;
