@@ -1,11 +1,10 @@
---  https://adventofcode.com/2020'
+--  https://adventofcode.com/2020
 
 project Advent_Of_Code is
 
    for Source_Dirs use (".", "src/**");
    for Object_Dir use ".obj";
 
-   for Main use project'Main & ("adventofcode-day_1-main.adb");
    for Main use project'Main & ("adventofcode-day_2-main.adb");
    for Main use project'Main & ("adventofcode-day_3-main.adb");
    for Main use project'Main & ("adventofcode-day_4-main.adb");
@@ -30,7 +29,11 @@ project Advent_Of_Code is
    for Main use project'Main & ("adventofcode-day_23-main.adb");
    for Main use project'Main & ("adventofcode-day_24-main.adb");
    for Main use project'Main & ("adventofcode-day_25-main.adb");
-   for Languages use ("Ada", "Makefile", "Project File");
+
+   for Main use project'Main & ("adventofcode-day_1-main.adb");
+
+
+   for Languages use ("Ada", "Makefile");
    for Exec_Dir use "bin";
 
    package Make is
@@ -43,11 +46,9 @@ project Advent_Of_Code is
 
    package Compiler is
       for Driver ("makefile") use "";
-      for Driver ("project file") use "";
       for Switches ("ada") use ("-gnatf");
       for Switches ("ada") use Compiler'Switches ("ada") & ("-g");
       for Switches ("ada") use Compiler'Switches ("ada") & ("-gnatX");
-      --  for Switches ("ada") use Switches ("ada") & ("-fcallgraph-info=su,da");
       for Switches ("ada") use Compiler'Switches ("ada") & ("-gnatwa");
       for Switches ("ada") use Compiler'Switches ("ada") & ("-gnatyaAbBcdfhiklnOprtux");
    end Compiler;
@@ -72,7 +73,6 @@ project Advent_Of_Code is
    package Naming is
       for Body_Suffix ("makefile") use ".mk";
       for Implementation_Exceptions ("makefile") use ("Makefile");
-      for Spec_Suffix ("project file") use ".gpr";
    end Naming;
 
 end Advent_Of_Code;

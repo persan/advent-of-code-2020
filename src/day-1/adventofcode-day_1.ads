@@ -1,3 +1,4 @@
+--  https://adventofcode.com/2020/day/1
 --  --- Day 1: Report Repair ---
 --
 --  After saving Christmas five years in a row, you've decided to take a vacation at a nice resort on a tropical island.
