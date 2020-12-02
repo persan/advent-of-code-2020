@@ -5,7 +5,7 @@ procedure Adventofcode.Day_2.Main is
       Count : Natural := 0;
    begin
       for Line of Adventofcode.File_Line_Readers.Read_Lines (Path) loop
-         if Parse (Line).Valid then
+         if Parse (Line).Valid2 then
             Count := Count + 1;
          end if;
       end loop;

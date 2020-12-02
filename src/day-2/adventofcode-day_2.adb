@@ -17,6 +17,12 @@ package body Adventofcode.Day_2 is
       return Self.Min <= Count and then  Count <= Self.Max;
    end Valid;
 
+   function Valid2 (Self : Password_Entry) return Boolean is
+   begin
+      return (Self.Password.all (Self.Password.all'First - 1 + Self.Min) = Self.Key) xor
+        (Self.Password.all (Self.Password.all'First - 1 + Self.Max) = Self.Key);
+   end Valid2;
+
    -----------
    -- Parse --
    -----------
