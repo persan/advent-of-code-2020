@@ -9,7 +9,7 @@ package body Adventofcode.Day_6 is
    begin
       return Ret : Reply_Type do
          for C of Item loop
-            Ret (C) := True;
+            Ret (Question_Id (C)) := True;
          end loop;
       end return;
    end Value;
@@ -37,7 +37,7 @@ package body Adventofcode.Day_6 is
    begin
       for Index in Item'Range loop
          if Item (Index) then
-            Ret (Cursor) := Index;
+            Ret (Cursor) := Character (Index);
             Cursor := Cursor + 1;
          end if;
       end  loop;

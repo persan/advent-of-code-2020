@@ -6,7 +6,6 @@ project Advent_Of_Code is
    for Object_Dir use ".obj";
 
    for Main use project'Main & ("adventofcode-day_4-main.adb");
-   for Main use project'Main & ("adventofcode-day_5-main.adb");
    for Main use project'Main & ("adventofcode-day_6-main.adb");
    for Main use project'Main & ("adventofcode-day_7-main.adb");
    for Main use project'Main & ("adventofcode-day_8-main.adb");
@@ -31,6 +30,7 @@ project Advent_Of_Code is
    for Main use project'Main & ("adventofcode-day_1-main.adb");
    for Main use project'Main & ("adventofcode-day_2-main.adb");
    for Main use project'Main & ("adventofcode-day_3-main.adb");
+   for Main use project'Main & ("adventofcode-day_5-main.adb");
 
 
    for Languages use ("Ada", "Makefile");
@@ -50,6 +50,8 @@ project Advent_Of_Code is
       for Switches ("ada") use Compiler'Switches ("ada") & ("-g");
       for Switches ("ada") use Compiler'Switches ("ada") & ("-gnatX");
       for Switches ("ada") use Compiler'Switches ("ada") & ("-gnatwa");
+      for Switches ("ada") use Compiler'Switches ("ada") & ("-gnateE");
+      for Switches ("ada") use Compiler'Switches ("ada") & ("-gnata");
       for Switches ("ada") use Compiler'Switches ("ada") & ("-gnatyaAbBcdfhiklnOprtux");
    end Compiler;
 
