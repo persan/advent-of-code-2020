@@ -59,41 +59,42 @@ package body Adventofcode.Day_4 is
 
    procedure Append (Self : in out Passport; Fields : String) is
    begin
-      for F of GNAT.String_Split.Create (Fields, " " & ASCII.LF & ASCII.CR) loop
-         declare
-            Separator_Index : constant Natural := Index (F, ":");
-            Key             : constant String := F (F'First .. Separator_Index - 1);
-            Value           : constant String := F (Separator_Index + 1 .. F'Last);
-         begin
-            if Key = "byr" then
-               Self.Birth_Year := Year_Type'Value (Value);
-
-            elsif Key = "iyr" then
-               Self.Issue_Year := Year_Type'Value (Value);
-
-            elsif Key = "eyr" then
-               Self.Expiration_Year := Year_Type'Value (Value);
-
-            elsif Key = "hgt" then
-               Self.Height := new String'(Value);
-
-            elsif Key = "hcl" then
-               Self.Hair_Color := new String'(Value);
-
-            elsif Key = "ecl" then
-               Self.Eye_Color := new String'(Value);
-
-            elsif Key = "pid" then
-               Self.Passport_ID := new String'(Value);
-
-            elsif Key = "cid" then
-               Self.Country_ID := Country_ID_Type'Value (Value);
-
-            else
-               raise Constraint_Error with "invalid Key:" & Key;
-            end if;
-         end;
-      end loop;
+      --  for F of GNAT.String_Split.Create (Fields, " " & ASCII.LF & ASCII.CR) loop
+      --     declare
+      --        Separator_Index : constant Natural := Index (F, ":");
+      --        Key             : constant String := F (F'First .. Separator_Index - 1);
+      --        Value           : constant String := F (Separator_Index + 1 .. F'Last);
+      --     begin
+      --        if Key = "byr" then
+      --           Self.Birth_Year := Year_Type'Value (Value);
+      --
+      --        elsif Key = "iyr" then
+      --           Self.Issue_Year := Year_Type'Value (Value);
+      --
+      --        elsif Key = "eyr" then
+      --           Self.Expiration_Year := Year_Type'Value (Value);
+      --
+      --        elsif Key = "hgt" then
+      --           Self.Height := new String'(Value);
+      --
+      --        elsif Key = "hcl" then
+      --           Self.Hair_Color := new String'(Value);
+      --
+      --        elsif Key = "ecl" then
+      --           Self.Eye_Color := new String'(Value);
+      --
+      --        elsif Key = "pid" then
+      --           Self.Passport_ID := new String'(Value);
+      --
+      --        elsif Key = "cid" then
+      --           Self.Country_ID := Country_ID_Type'Value (Value);
+      --
+      --        else
+      --           raise Constraint_Error with "invalid Key:" & Key;
+      --        end if;
+      --     end;
+      --  end loop;
+      null;
    end;
 
    function Count_Valid (Passports : Passport_Vector) return Natural is
